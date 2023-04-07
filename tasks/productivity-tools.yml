@@ -1,0 +1,6 @@
+- name: Install packages
+  community.general.homebrew:
+    name: [ "tmux", "fzf", "ripgrep"]
+  tags:
+    - install
+    - productivity

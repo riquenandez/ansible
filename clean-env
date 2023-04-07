@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Undo node
+npm uninstall -g typescript-language-server typescript
+brew uninstall nodejs npm
+brew autoremove
+rm /opt/homebrew/bin/n
+rm /opt/homebrow/lib/node_modules/n/bin/n
+rm /opt/homebrew/bin/node
+
+# Undo zsh
+uninstall_oh_my_zsh
+
+# Undo Core Install
+brew uninstall ninja, libtool, cmake, pkg-connfig, gettext, curl, tmux, fzf, ripgrep

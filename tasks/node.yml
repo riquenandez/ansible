@@ -1,0 +1,45 @@
+- name: Install nodejs and npm
+  community.general.homebrew:
+    name: ['nodejs', 'npm']
+  tags:
+    - install
+    - node
+
+- name: npmjs prefix
+  shell: mkdir -p ~/.n
+  tags:
+  - install
+  - node
+
+- name: add npmjs to path
+  shell: PATH=~/.n/bin:$PATH
+  tags:
+  - install
+  - node
+
+- name: npmjs global settings
+  shell: npm config set prefix '~/.n'
+  tags:
+  - install
+  - node
+
+- name: npmjs global settings export path in case I don't have dotfiles installed
+  shell: export PATH=~/.n/bin:$PATH
+  tags:
+  - install
+  - node
+  - npm-path
+
+- name: Install N
+  npm:
+    name: n
+    global: true
+  tags:
+    - install
+    - node
+
+- name: Install correct version of Node
+  shell: n 18
+  tags:
+    - install
+    - node
