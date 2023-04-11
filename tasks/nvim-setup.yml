@@ -29,7 +29,7 @@
     - install
     - neovim
 - name: npmjs global settings export path in case I don't have dotfiles installed
-  shell: export PATH=~/neovim/bin:$PATH
+  shell: export PATH=~/neovim/build/bin:$PATH
   tags:
   - install
   - neovim

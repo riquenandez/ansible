@@ -1,6 +1,6 @@
 - name: Install packages
   community.general.homebrew:
-    name: [ "ninja", "libtool", "cmake", "pkg-connfig", "gettext", "curl"]
+    name: [ "ninja", "libtool", "cmake", "pkg-config", "gettext", "curl"]
   tags:
     - install
     - neovim
