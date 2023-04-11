@@ -1,6 +1,26 @@
 - name: Install packages
   community.general.homebrew:
-    name: [ "tmux", "fzf", "ripgrep"]
+    name: [ "tmux", "fzf", "ripgrep", "koekeishiya/formulae/yabai", "koekeishiya/formulae/skhd"]
+  tags:
+    - install
+    - productivity
+
+- name: Install karabiner elements
+  community.general.homebrew_cask:
+    name: karabiner-elements
+    state: present
+  tags:
+    - install
+    - productivity
+
+- name: Start yabai
+  command: /opt/homebrew/bin/brew services start yabai
+  tags:
+    - install
+    - productivity
+
+- name: Start skhd 
+  command: /opt/homebrew/bin/brew services start skhd 
   tags:
     - install
     - productivity
